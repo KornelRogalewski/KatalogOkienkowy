@@ -5,8 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KatalogOkienkowy"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="650" Width="1000">
+    <StackPanel Margin="20">
+        <TextBlock x:Name="Glownystackpanel"
+                   Text="Katalog Produktów"
+                   FontSize="24"
+                   FontWeight="Bold" />
+        <StackPanel Orientation="Horizontal" Margin="0, 10, 0, 0">
+            <TextBlock Text="Produktów: "
+                       FontSize="14" />
+            <TextBlock x:Name="EtykietaLiczbyProduktów"
+                       Text="0"
+                       FontSize="14" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0, 10, 0, 0">
+            <TextBlock Text="Wartość magazynu: "
+                       FontSize="14" />
+            <TextBlock x:Name="EtykietaWartosciMagazynu"
+                       Text="0"
+                       FontSize="14" />
+        </StackPanel>
+        <Button HorizontalAlignment="Center" Padding="5">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="pack://application:,,,/Images/plus.png" Width="10" Height="10" Margin="10" />
+                <TextBlock Text="Podaj produkt"
+                       FontSize="14"
+                       FontWeight="Bold" />
+                
+                
+            </StackPanel>
+        </Button>
 
-    </Grid>
+    </StackPanel>
 </Window>
