@@ -6,6 +6,48 @@
         xmlns:local="clr-namespace:KatalogOkienkowy"
         mc:Ignorable="d"
         Title="MainWindow" Height="650" Width="1000">
+    <!-- Nowy layout -->
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" 
+            Text="Katalog produktów"
+            FontSize="24" 
+            FontWeight="Bold" />
+        <Button Grid.Row="0" Grid.Column="1" 
+                Content="Odśwież" Width="100" />
+        <TextBlock Grid.Row="1" Grid.Column="0"
+                   Text="Tu pojawi się lista produktów"
+                   FontSize="18" 
+                   Margin="0,10,0,0"/>
+        <StackPanel Grid.Row="2" Grid.Column="0" 
+                    Orientation="Horizontal" HorizontalAlignment="Right"
+                    Margin="0,10,0,0">
+            <TextBlock Text="Produktów: "
+                    FontSize="14" FontWeight="Bold" />
+            <TextBlock x:Name="EtykietaLiczbaProduktow" 
+                   Text="0" 
+                   FontSize="14" 
+                   Margin="0,0,10,0"/>
+            <TextBlock Text="Łączna wartość: "
+                   FontSize="14" FontWeight="Bold" />
+            <TextBlock x:Name="EtykietaWartoscMagazynu" 
+                   Text="0" 
+                   FontSize="14" 
+                   Margin="0,0,10,0"/>
+            <Button Content="Dodaj" Width="100" Margin="0,0,10,0" />
+            <Button Content="Usuń" Width="100" Margin="0,0,10,0" />
+            <Button Content="Zamknij" Width="100"/>
+        </StackPanel>
+    </Grid>
+    <!-- stary layout
     <StackPanel Margin="20">
         <TextBlock x:Name="Glownystackpanel"
                    Text="Katalog Produktów"
@@ -13,14 +55,16 @@
                    FontWeight="Bold" />
         <StackPanel Orientation="Horizontal" Margin="0, 10, 0, 0">
             <TextBlock Text="Produktów: "
-                       FontSize="14" />
+                       FontSize="14"
+                       FontWeight="Bold" />
             <TextBlock x:Name="EtykietaLiczbyProduktów"
                        Text="0"
                        FontSize="14" />
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0, 10, 0, 0">
             <TextBlock Text="Wartość magazynu: "
-                       FontSize="14" />
+                       FontSize="14"
+                       FontWeight="Bold" />
             <TextBlock x:Name="EtykietaWartosciMagazynu"
                        Text="0"
                        FontSize="14" />
@@ -29,12 +73,13 @@
             <StackPanel Orientation="Horizontal">
                 <Image Source="pack://application:,,,/Images/plus.png" Width="10" Height="10" Margin="10" />
                 <TextBlock Text="Podaj produkt"
-                       FontSize="14"
-                       FontWeight="Bold" />
+                           FontSize="14"
+                           FontWeight="Bold" />
                 
                 
             </StackPanel>
         </Button>
 
     </StackPanel>
+    stary layout -->
 </Window>
