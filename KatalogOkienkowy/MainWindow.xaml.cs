@@ -29,8 +29,8 @@ namespace KatalogOkienkowy
                 new Produkt("Dysk ssd samsung 97b evb plus 1tb", 699.99, "Dyski ssd", 15)
             };
 
-            EtykietaLiczbyProduktów.Text = $"{produkty.Count}";
-            EtykietaWartosciMagazynu.Text = $"{Produkt.ObliczWartoscMagazynu(produkty):f2} zł";
+            EtykietaLiczbaProduktow.Text = produkty.Count.ToString();
+            EtykietaWartoscMagazynu.Text = $"{Produkt.ObliczWartoscMagazynu(produkty):f2} zł";
 
             TextBlock dopisek = new TextBlock();
             dopisek.Text = "a";

@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="300" />
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Row="0" Grid.Column="0" 
             Text="Katalog produktów"
@@ -27,25 +27,63 @@
                    Text="Tu pojawi się lista produktów"
                    FontSize="18" 
                    Margin="0,10,0,0"/>
-        <StackPanel Grid.Row="2" Grid.Column="0" 
-                    Orientation="Horizontal" HorizontalAlignment="Right"
-                    Margin="0,10,0,0">
-            <TextBlock Text="Produktów: "
-                    FontSize="14" FontWeight="Bold" />
-            <TextBlock x:Name="EtykietaLiczbaProduktow" 
-                   Text="0" 
-                   FontSize="14" 
-                   Margin="0,0,10,0"/>
-            <TextBlock Text="Łączna wartość: "
-                   FontSize="14" FontWeight="Bold" />
-            <TextBlock x:Name="EtykietaWartoscMagazynu" 
-                   Text="0" 
-                   FontSize="14" 
-                   Margin="0,0,10,0"/>
-            <Button Content="Dodaj" Width="100" Margin="0,0,10,0" />
-            <Button Content="Usuń" Width="100" Margin="0,0,10,0" />
-            <Button Content="Zamknij" Width="100"/>
-        </StackPanel>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Nazwa produktu:" VerticalAlignment="Center"/>
+            <TextBox x:Name="EtykietaNazwa" Grid.Row="0" Grid.Column="1" Margin="0 10"/>
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Cena:" VerticalAlignment="Center"/>
+            <TextBox x:Name="EtykietaCena" Grid.Row="1" Grid.Column="1" Margin="0 10"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Ilość:" VerticalAlignment="Center"/>
+            <TextBox x:Name="EtykietaIlosc" Grid.Row="2" Grid.Column="1" Margin="0 10"/>
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Kategoria:"
+                       VerticalAlignment="Center"/>
+
+            <ComboBox x:Name="ComboBoxKategoria" Grid.Row="3" Grid.Column="1" Margin="0 10">
+                <ComboBoxItem Content="Kategoria 1"/>
+                <ComboBoxItem Content="Kategoria 2"/>
+                <ComboBoxItem Content="Kategoria 3"/>
+            </ComboBox>
+            <CheckBox x:Name="CzekboxDostepny" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="0 10" 
+                      Content="Produkt dostępny" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Button x:Name="PrzyciskDodaj" Grid.Row="5" Grid.Column="0" Margin="0 10"
+                    Grid.ColumnSpan="2" 
+                    Content="Dodaj" />
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Row="0" Grid.Column="0">
+                <TextBlock Text="Produktów: "
+                            FontSize="14" FontWeight="Bold" />
+                <TextBlock x:Name="EtykietaLiczbaProduktow" Text="0" FontSize="14" />
+            </StackPanel>
+            <StackPanel Grid.Row="0" Grid.Column="1">
+                <TextBlock Text="Łączna wartość: "
+                            FontSize="14" FontWeight="Bold" />
+                <TextBlock x:Name="EtykietaWartoscMagazynu" 
+                           Text="0" 
+                           FontSize="14"/>
+            </StackPanel>
+            <Button x:Name="PrzyciskUsun" Grid.Row="0" Grid.Column="2" Content="Usuń" Margin="0 0 5 0"/>
+            <Button x:Name="PrzyciskZamknij" Grid.Row="0" Grid.Column="3" Content="Zamknij" Margin="5 0 0 0"/>
+        </Grid>
     </Grid>
     <!-- stary layout
     <StackPanel Margin="20">
